@@ -1,0 +1,322 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CFS-Taskforce</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">NGC Survey</a>
+    </nav>
+    <!-- FORM -->
+    <div class="container" id="form">
+      <form method="POST" id="signup-form" action="#">
+        <div>
+          <h2 class="display-3">National Graduate Caucus</h2>
+          <hr />
+          <fieldset class="form-group">
+            <h3>Local information</h3>
+            <p class="lead">
+              Please enter your local information.
+            </p>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Name" />
+              <small class="form-text text-muted">Enter Local Name</small>
+            </div>
+            <div class="from-group">
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Local Number"
+              />
+              <small class="form-text text-muted">Enter Local Number</small>
+            </div>
+          </fieldset>
+          <hr />
+
+          <fieldset class="form-group">
+            <h3>Funding information</h3>
+            <p class="lead">
+              Please enter data below.
+            </p>
+            <div class="form-group">
+              <label class="font-weight-light" for="Masters">
+                Domestic Masters Average Tuition Fees</label
+              >
+              <input type="number" class="form-control" />
+              <small class="form-text text-muted"
+                >Enter average tuition fees for masters students</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="font-weight-light" for="PHD">
+                Domestic Phd Average Tuition Fees</label
+              >
+              <input type="number" class="form-control" />
+              <small class="form-text text-muted"
+                >Enter average tuition fees for phd students</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="font-weight-light" for="min funding">
+                Guranteed Minimum Funding</label
+              >
+              <select type="number" class="form-control">
+                <option value="No Minimum Funding">No Minimum Funding</option>
+                <option value="less than $10k">less than $10k</option>
+                <option value="$10k-20k">$10k-20k</option>
+                <option value="more than $20k">more than $20k</option>
+              </select>
+            </div>
+            <hr />
+          </fieldset>
+
+          <fieldset class="form-group">
+            <h3>International Student Funding information</h3>
+            <p class="lead">
+              Please enter data below.
+            </p>
+            <div class="form-group">
+              <label class="font-weight-light" for="Masters-International">
+                International Masters Average Tuition Fees</label
+              >
+              <input type="number" class="form-control" />
+              <small class="form-text text-muted"
+                >Enter average tuition fees for international masters
+                students</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="font-weight-light" for="PHD-International">
+                International Phd Average Tuition Fees</label
+              >
+              <input type="number" class="form-control" />
+              <small class="form-text text-muted"
+                >Enter average tuition fees for international phd
+                students</small
+              >
+            </div>
+            <label class="font-weight-light" for="international health plan"
+              >Is cost of Provincial Medicare/Health plan for international
+              students covered by Base Funding?</label
+            >
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="uhip"
+                value="yes"
+              />
+              <label for="yes" class="form-check-label">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="uhip"
+                value="no"
+              />
+              <label for="no" class="form-check-label">No</label>
+            </div>
+            <hr />
+          </fieldset>
+
+          <fieldset class="form-group">
+            <h3>Ancillary Fees</h3>
+            <p class="lead">
+              Please enter data below.
+            </p>
+            <div class="form-group">
+              <label class="font-weight-light" for="union fees">
+                Local Fees per academic year</label
+              >
+              <input type="number" lass="form-control" />
+              <small class="form-text text-muted"
+                >Enter local fee for an academic year, including healh insurance
+                fees</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="font-weight-light" for="ancillary fees">
+                Other Ancillary Fees</label
+              >
+              <input type="number" lass="form-control" />
+              <small class="form-text text-muted"
+                >Enter all other student levies and university ancillary
+                fees</small
+              >
+            </div>
+            <hr />
+          </fieldset>
+
+          <fieldset class="form-group">
+            <h3>Acadamic Labour</h3>
+            <p class="lead">
+              Enter Data on TAships, RAships and other employment based funding
+            </p>
+            <div class="form-group">
+              <label class="font-weight-light" for="taships">
+                Number of Weekly Work Hours</label
+              >
+              <input type="number" class="form-control" />
+              <small class="form-text text-muted"
+                >Enter maximum allowable weekly hours as per collective
+                agreement</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="font-weight-light" for="taships hours">
+                Number of Weeks</label
+              >
+              <input type="number" class="form-control" />
+              <small class="form-text text-muted"
+                >Enter amount of weeks worked per term</small
+              >
+            </div>
+            <div class="form-group">
+              <label class="font-weight-light" for="taships rates">
+                Work Pay Rate</label
+              >
+              <input type="number" class="form-control" />
+              <small class="form-text text-muted">Enter hourly rate</small>
+            </div>
+            <label class="font-weight-light" for="taship"
+              >Is your work considered part of the base funding?</label
+            >
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="taship"
+                value="yes"
+              />
+              <label for="yes" class="form-check-label">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="taship"
+                value="no"
+              />
+              <label for="no" class="form-check-label">No</label>
+            </div>
+            <label class="font-weight-light" for="other work"
+              >Are you allowed to work other jobs?</label
+            >
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="other-work"
+                value="yes"
+              />
+              <label for="yes" class="form-check-label">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="other-work"
+                value="no"
+              />
+              <label for="no" class="form-check-label">No</label>
+            </div>
+            <hr />
+          </fieldset>
+
+          <fieldset class="form-group">
+            <h3>Relevant Links</h3>
+            <p class="lead">
+              Please enter any links to any relevant informaion such as local
+              website, collective agreements, labour union website etc..
+            </p>
+            <div class="form-group">
+              <label class="font-weight-light" for="link">Link</label>
+              <input type="text" class="form-control" />
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="link"
+                  value="Local"
+                />
+                <label for="local" class="form-check-label">Local</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="link"
+                  value="union"
+                />
+                <label for="union" class="form-check-label">Union</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="link"
+                  value="CA"
+                />
+                <label for="CA" class="form-check-label"
+                  >Collective Agreement</label
+                >
+              </div>
+              <!-- TODO add ability to increase amount of inputs by user -->
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="link"
+                  value="Other"
+                />
+                <label for="other" class="form-check-label">Other</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-group">
+            <h3>Anything else you would like to add?</h3>
+            <textarea
+              class="form-control"
+              name="notes"
+              id=""
+              cols="30"
+              rows="5"
+            ></textarea>
+          </fieldset>
+
+          <button class="btn btn-primary btn-block btn-lg" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
